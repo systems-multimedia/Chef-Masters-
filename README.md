@@ -1,27 +1,23 @@
 # ChefMasters
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+## ¡Felicidades!
+Usted ha sido seleccionado por el equipo de Chef Masters ®
+Latinoamérica, para la realización de una página web que contenga información y
+preparación de algunas de sus recetas.
 
-## Development server
+En la búsqueda de complacer al gran y muy exigente chef Bordon Damsay, el
+portal web debe dar la posibilidad al usuario de ver todas las recetas en su página
+principal ( home ) la cual tendrá, cada una de estas recetas en un thumbnail junto con
+su información destacada; tales como nombre de la receta y una foto para
+identificarla. Además, el usuario debe poder seleccionar la receta que desee y ésto
+lo llevará a una vista detallada de la misma, donde se pueda observar el nombre,
+fotografía, descripción, lista de ingredientes y proceso de preparación de la receta,
+así como una lista de palabras clave ( tags ) que la identifiquen.
+Por otra parte, el sitio web debe ser agradable a la vista de los usuarios, debe
+tener un banner de bienvenida y debe poder ser usado en dispositivos móviles, tales
+como teléfonos celulares, tablets y múltiples resoluciones de pantalla ( responsive ).
+Toda la información referente tanto a la compañía como al Chef, está
+referenciado en el archivo DATA.txt. ya que también se espera que la página tenga
+una vista con la Información del chef.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## &copy; S. Boada - M. De Andrade
