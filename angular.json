@@ -23,7 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/grid.css",
+              "src/normalize.css",
+              "src/queries.css",
+              "node_modules/ionicons/dist/scss/ionicons.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
