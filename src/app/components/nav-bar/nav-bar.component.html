@@ -3,9 +3,15 @@
     <div class="row">
       <img src="../../../assets/images/logo-white.png" alt="Omnifood logo" class="logo">
       <ul class="main-nav">
-        <li><a [routerLink]="['/menu/home']" routerLinkActive="router-link-active">Home</a></li>
-        <li><a href="#">How it works</a></li>
-        <li><a href="#">Our cities</a></li>
+        <li>
+          <form *ngIf="displaySearch">
+            <input type="text" placeholder="search" class="form-input-text">
+            <label class="fa fa-search"></label>
+          </form>
+        </li>
+        <li><a [routerLink]="['/menu/home']" routerLinkActive="router-link-active"
+            (click)="displaySearchForm()">Home</a></li>
+        <li><a href="#">About us</a></li>
         <li><a href="#">Sign up</a></li>
       </ul>
     </div>

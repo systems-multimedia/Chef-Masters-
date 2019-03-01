@@ -27,7 +27,8 @@
               "src/grid.css",
               "src/normalize.css",
               "src/queries.css",
-              "node_modules/ionicons/dist/scss/ionicons.scss"
+              "node_modules/ionicons/dist/scss/ionicons.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true

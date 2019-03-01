@@ -2,6 +2,16 @@
 /*  Header                       */
 /*===============================*/
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets//img/hero.jpg");
   background-size: cover;
@@ -53,3 +63,45 @@
 .main-nav li a:active {
   border-bottom: 2px solid #e67e22;
 }
+
+.form-input-text {
+  background: rgba(0,0,0,0.0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-family: 'Lato','Arial', sans-serif;
+  padding: 8px 10px;
+  font-weight: 200;
+}
+.form-input-text, .fa-search {
+  animation: appear 0.2s linear;
+}
+.form-input-text::placeholder{
+  color: white;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.form-input-text:hover,
+.form-input-text:active,
+.form-input-text:focus{
+  outline: 0;
+  border-bottom: 2px solid #e67e22;
+}
+
+.search-btn {
+  background: none;
+  height: 35px;
+  padding: 3px 10px;
+}
+.fa {
+  color: white;
+  size: 10x;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.fa-search:hover {
+  color: #e67e22;
+}
+
