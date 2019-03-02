@@ -1,0 +1,10 @@
+<section class="section-meals">
+  <ul class="meals-showcase claerfix">
+    <li *ngFor="let recipe of recipes">
+      <figure class="meal-photo" (click)="findRecipe(recipe.name)">
+        <h2 class="meal-name">{{ recipe.name }}</h2>
+        <img [src]="recipe.image" alt="{{ recipe.name }}">
+      </figure>
+    </li>
+  </ul>
+</section>
