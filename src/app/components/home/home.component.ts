@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { DetailComponent } from '../detail/detail.component';
+import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,9 +9,14 @@ import { DetailComponent } from '../detail/detail.component';
 })
 export class HomeComponent implements OnInit {
   modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { }
+  recipes = [];
+  constructor(
+    private modalService: BsModalService,
+    private dataService: DataService
+    ) { }
 
   ngOnInit() {
+    this.recipes = this.dataService.getRecipes();
   }
 
   openModal() {

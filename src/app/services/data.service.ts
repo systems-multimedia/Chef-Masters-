@@ -12,6 +12,7 @@ export class DataService {
     description: string,
   };
   recipes = [];
+
   constructor() {
     this.restaurant_info = {
       name: 'Chef Masters',
@@ -21,6 +22,7 @@ export class DataService {
     };
 
     this.recipes = [
+      /////////////////
       {
         image: "http://forkgasm.com/images/carbonara.jpg",
         name: "Turnip Noodle Carbonara",
@@ -91,6 +93,8 @@ export class DataService {
         notes: "Turnip noodles are far closer to spaghetti than zucchini noodles that lose their shape. You can get them pre-spiralized from Whole Foods, or make them yourself with a spiralizer.",
         forked: "[Zucchini Noodle Carbonara Recipe](https://skinnyms.com/zucchini-noodle-carbonara-recipe/)"
       },
+
+      /////////////////
       {
         image: "http://forkgasm.com/images/40813912_2213541505597183_7740637805202109577_n.jpg",
         name: "Spiced lamb chops with mint-mango sauce",
@@ -215,6 +219,8 @@ export class DataService {
         notes: "- If you’re out of green onions, you can substitute them in the sauce with 1 shallot\n- A good way to use the spice mix is to put it in an empty spice jar and use that to sprinkle it evenly on the lamb chops.\n- This spice mix is delicious and great on so many things! We've tried it on beef, duck, even carbonara! Might be a good idea to make more than is needed for this dish and keep it around.\n- If you have sauce leftovers, it keeps well in the fridge for days in an airtight container. It may darken a bit due to the avocado but it still tastes good.",
         forked: "[Spiced Lamb Chops with Mint-Mango Sauce](https://www.epicurious.com/recipes/food/views/spiced-lamb-chops-with-mint-mango-sauce-109587)"
       },
+
+      /////////////////
       {
         name: "Papoutsakia",
         id: "papoutsakia",
@@ -360,6 +366,8 @@ export class DataService {
         forked: "[?ap??ts???a µe µpesaµ??](https://akispetretzikis.com/el/categories/kreas/melitzanes-papoytsakia-me-mpesamel),\nMaria’s moussaka recipe,\n[Low carb roux,  béchamel and souffle](http://www.fatisourfriend.com/roux-bechamel-and-souffle.html)",
         image: "http://forkgasm.com/images/6410429C-D04A-4624-9026-715C0A64A005.jpeg"
       },
+
+      /////////////////
       {
         image: "http://forkgasm.com/images/gambas.png",
         name: "Gambas al Ajillo",
@@ -1592,26 +1600,48 @@ export class DataService {
           }
         ]
       }
-    ]
+    ];
   }
 
-
-  getRestaurantName() {
-    return this.restaurant_info.name;
+  //  Return all recipes
+  getRecipes() {
+    return this.recipes;
   }
 
-  getRestaurantOwner() {
-    return this.restaurant_info.owner;
+  //  Return recipe
+  getRecipe(name) {
+    let found: boolean;
+    for (let i = 0; i < this.recipes.length; i++) {
+      if (this.recipes[i].name == name) {
+        return this.recipes[i];
+      } 
+    }
+
+    return null;
   }
 
-  getRestaurantDescription() {
-    return this.restaurant_info.description;
+  //  Return Restaurant Information
+  getRestData() {
+    return this.restaurant_info;
   }
 
-  getRestaurantImage() {
-    return this.restaurant_info.profile_pic
-  }
+  //jajajaajxd
+  // getRestaurantName() {
+  //   return this.restaurant_info.name;
+  // }
 
-  
+  // getRestaurantOwner() {
+  //   return this.restaurant_info.owner;
+  // }
+
+  // getRestaurantDescription() {
+  //   return this.restaurant_info.description;
+  // }
+
+  // getRestaurantImage() {
+  //   return this.restaurant_info.profile_pic
+  // }
+
+
 
 }
