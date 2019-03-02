@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  recipe: any;
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.recipe = this.dataService.getModalInfo();
   }
 
 }

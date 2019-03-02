@@ -13,10 +13,15 @@ export class HomeComponent implements OnInit {
   constructor(
     private modalService: BsModalService,
     private dataService: DataService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.recipes = this.dataService.getRecipes();
+  }
+
+  findRecipe(name) {
+    this.dataService.getRecipe(name);
+    this.openModal();
   }
 
   openModal() {

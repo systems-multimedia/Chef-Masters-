@@ -12,6 +12,7 @@ export class DataService {
     description: string,
   };
   recipes = [];
+  modalInfo;
 
   constructor() {
     this.restaurant_info = {
@@ -587,7 +588,7 @@ export class DataService {
           "Italian-American",
           "Salad"
         ],
-        image: "https://instagram.fbed1-1.fna.fbcdn.net/t51.2885-15/e35/14712020_1147704851979954_5563654975441076224_n.jpg",
+        image: "https://www.simplyrecipes.com/wp-content/uploads/2009/09/caesar-salad-vertical-a-1800-600x763.jpg",
         ingredient: [
           {
             amount: "0.5",
@@ -1346,7 +1347,7 @@ export class DataService {
             description: "Finish with the lemon juice and serve."
           }
         ],
-        image: "/images/khoresht-karafs.png",
+        image: "http://forkgasm.com/images/khoresht-karafs.png",
         tag: [
           "Stew",
           "Persian",
@@ -1608,11 +1609,16 @@ export class DataService {
     return this.recipes;
   }
 
+  getModalInfo(){
+    return this.modalInfo;
+  }
+
   //  Return recipe
   getRecipe(name) {
     let found: boolean;
     for (let i = 0; i < this.recipes.length; i++) {
       if (this.recipes[i].name == name) {
+        this.modalInfo = this.recipes[i];
         return this.recipes[i];
       } 
     }
