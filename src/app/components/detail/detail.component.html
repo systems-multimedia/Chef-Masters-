@@ -1,0 +1,46 @@
+<div class="detail">
+  <ul class="list-unstyled">
+    <li class="card card-body"><img [src]="recipe.image" alt="{{ recipe.name }}"></li>
+    <li class="card card-body">
+      <h1>{{ recipe.name }}</h1>
+      <br>
+    </li>
+    <p class="card card-body">{{ recipe.description }}</p>
+
+    <ul class="list-group" *ngIf="(recipe.ingredient.length != null)">
+
+      <h3>Ingredients</h3>
+      <li *ngFor="let ingredient of recipe.ingredient" class="list-group-item">
+        <h2>{{ ingredient.amount }} {{ ingredient.unit }}</h2>
+        <p>of {{ ingredient.name }}</p>
+        <p>{{ ingredient.preparation }}</p>
+      </li>
+    </ul>
+
+    <ul class="list-group" *ngIf="recipe.step.length > 0">
+      <h3>Steps</h3>
+      <li *ngFor="let step of recipe.step" class="list-group-item">
+        <p>{{ step.description }}</p>
+      </li>
+    </ul>
+
+    <ul class="list-group" *ngIf="recipe.ingredientGroup.length > 0">
+
+      <h3>Ingredients Group</h3>
+      <li *ngFor="let ingredients of recipe.ingredientGroup" class="list-group-item">
+        <h4>{{ ingredients.name }}</h4>
+        <ul>
+          <li *ngFor="let ingredient of ingredients.ingredient" class="list-group-item">
+            <h2>{{ ingredient.amount }} {{ ingredient.unit }}</h2>
+            <p>of {{ ingredient.name }}</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="card card-body">
+      <h5 *ngIf="recipe.forked != null">Forked: {{ recipe.forked }}</h5>
+      <h5 *ngIf="recipe.notes != null">Note: {{ recipe.notes }}</h5>
+    </div>
+  </ul>
+</div>

@@ -1,0 +1,26 @@
+<div class="header">
+  <nav class="container">
+    <div class="row">
+      <img src="../../../assets/images/logo-white.png" alt="logo" class="logo">
+      <ul class="main-nav">
+        <li>
+          <form *ngIf="displaySearch">
+            <input type="text" placeholder="search" class="form-input-text">
+            <label class="fa fa-search"></label>
+          </form>
+        </li>
+        <!-- <li><a [routerLink]="['/menu/home']" routerLinkActive="router-link-active"
+            (click)="displaySearchForm()">Home</a></li> -->
+        <li><a [routerLink]="['/menu/home']" routerLinkActive="router-link-active">Home</a></li>
+        <li><a [routerLink]="['/menu/about']" routerLinkActive="router-link-active" >About us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-text-box">
+    <h1>Goodbye junk food<br>Hello super healthy meals.</h1>
+    <a class="btn btn-full" href="#">I’m hungry </a>
+    <a class="btn btn-ghost" href="#">Show me more </a>
+  </div>
+</div>
+<router-outlet></router-outlet>
